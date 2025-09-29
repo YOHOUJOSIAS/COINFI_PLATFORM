@@ -1,0 +1,17 @@
+{
+  "network": "hederaTestnet",
+  "timestamp": "2025-09-11T17:20:37.079Z",
+  "deployer": "0x9F96d6CD57d11a83801c767777dcCD98431ea0af",
+  "contracts": {
+    "USDT": "0xFb33b8fFF518f71087A2a4Ca1b7b831062E8ef23",
+    "InvoiceToken": "0x1c3685740DC136ABf927e0410dF098CbFE7bfFeb"
+  },
+  "configuration": {
+    "admin": "0x9F96d6CD57d11a83801c767777dcCD98431ea0af",
+    "feeTreasury": "0x9F96d6CD57d11a83801c767777dcCD98431ea0af",
+    "entryFee": 100,
+    "performanceFee": 1000,
+    "poolFee": 200,
+    "issuanceFee": 500
+  }
+}
