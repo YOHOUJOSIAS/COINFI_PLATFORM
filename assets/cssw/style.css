@@ -1,0 +1,724 @@
+/* CoinFinance Custom Styles */
+:root {
+    --primary-color: #ff8c00;
+    --secondary-color: #1a1a1a;
+    --dark-bg: #121212;
+    --card-bg: #1e1e1e;
+    --border-color: #333;
+    --text-primary: #ffffff;
+    --text-secondary: #b0b0b0;
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+    --warning-color: #ffc107;
+    --info-color: #17a2b8;
+}
+
+/* Global Styles */
+body {
+    background-color: var(--dark-bg);
+    color: var(--text-primary);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    padding-top: 76px;
+}
+
+.main-content {
+    min-height: calc(100vh - 140px);
+}
+
+/* Navigation Styles */
+.navbar-dark {
+    background-color: var(--secondary-color) !important;
+    border-bottom: 1px solid var(--border-color);
+    backdrop-filter: blur(10px);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.nav-link {
+    color: var(--text-secondary) !important;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary-color) !important;
+}
+
+.dropdown-menu {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.dropdown-item {
+    color: var(--text-primary) !important;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background-color: var(--border-color);
+    color: var(--primary-color) !important;
+}
+
+/* Card Styles */
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+    background-color: transparent;
+    border-bottom: 1px solid var(--border-color);
+    font-weight: 600;
+}
+
+.card-title {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.card-text {
+    color: var(--text-secondary);
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    font-weight: 500;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #e67e00;
+    border-color: #e67e00;
+    transform: translateY(-1px);
+}
+
+.btn-secondary {
+    background-color: var(--border-color);
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+.btn-success {
+    background-color: var(--success-color);
+    border-color: var(--success-color);
+}
+
+.btn-danger {
+    background-color: var(--danger-color);
+    border-color: var(--danger-color);
+}
+
+.btn-warning {
+    background-color: var(--warning-color);
+    border-color: var(--warning-color);
+    color: #000;
+}
+
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Form Styles */
+.form-control {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    border-radius: 8px;
+}
+
+.form-control:focus {
+    background-color: var(--card-bg);
+    border-color: var(--primary-color);
+    color: var(--text-primary);
+    box-shadow: 0 0 0 0.2rem rgba(255, 140, 0, 0.25);
+}
+
+.form-select {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+}
+
+.form-label {
+    color: var(--text-primary);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+/* Progress Bar Styles */
+.progress {
+    background-color: var(--border-color);
+    border-radius: 8px;
+    height: 8px;
+}
+
+.progress-bar {
+    background-color: var(--primary-color);
+    border-radius: 8px;
+}
+
+.progress-bar-success {
+    background-color: var(--success-color);
+}
+
+.progress-bar-warning {
+    background-color: var(--warning-color);
+}
+
+.progress-bar-danger {
+    background-color: var(--danger-color);
+}
+
+/* Badge Styles */
+.badge {
+    font-weight: 500;
+    font-size: 0.875rem;
+    padding: 0.5em 0.75em;
+    border-radius: 6px;
+}
+
+.badge.bg-warning {
+    color: #000 !important;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Statistics Cards */
+.stat-card {
+    background: linear-gradient(135deg, var(--card-bg), var(--border-color));
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.stat-icon {
+    width: 60px;
+    height: 60px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.stat-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Invoice/Pool Cards */
+.invoice-card,
+.pool-card {
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    background-color: var(--card-bg);
+}
+
+.invoice-card:hover,
+.pool-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    border-color: var(--primary-color);
+}
+
+.card-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(0,0,0,0.7), rgba(0,0,0,0.3));
+    display: flex;
+    align-items: flex-end;
+    padding: 1rem;
+}
+
+.funding-progress {
+    margin: 1rem 0;
+}
+
+.funding-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.amount-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.amount-value {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.amount-label {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+/* Status Badges */
+.status-badge {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.status-active {
+    background-color: rgba(40, 167, 69, 0.2);
+    color: var(--success-color);
+    border: 1px solid rgba(40, 167, 69, 0.3);
+}
+
+.status-funded {
+    background-color: rgba(255, 193, 7, 0.2);
+    color: var(--warning-color);
+    border: 1px solid rgba(255, 193, 7, 0.3);
+}
+
+.status-paid {
+    background-color: rgba(23, 162, 184, 0.2);
+    color: var(--info-color);
+    border: 1px solid rgba(23, 162, 184, 0.3);
+}
+
+.status-overdue {
+    background-color: rgba(220, 53, 69, 0.2);
+    color: var(--danger-color);
+    border: 1px solid rgba(220, 53, 69, 0.3);
+}
+
+/* Wallet Connection */
+.wallet-status {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.wallet-connected {
+    color: var(--success-color);
+}
+
+.wallet-disconnected {
+    color: var(--danger-color);
+}
+
+/* Investment Form */
+.investment-form {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 2rem;
+}
+
+.investment-summary {
+    background-color: var(--border-color);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+/* Network Indicator */
+.network-indicator {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.network-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--success-color);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+/* Tables */
+.table-dark {
+    background-color: var(--card-bg);
+    border-color: var(--border-color);
+}
+
+.table-dark th,
+.table-dark td {
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+.table-dark thead th {
+    background-color: var(--secondary-color);
+    border-color: var(--border-color);
+}
+
+/* Pagination */
+.page-link {
+    background-color: var(--card-bg);
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+.page-link:hover {
+    background-color: var(--border-color);
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.page-item.active .page-link {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: #000;
+}
+
+/* Footer */
+footer {
+    border-top: 1px solid var(--border-color);
+}
+
+.social-links a {
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--primary-color) !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-content {
+        padding: 1rem;
+    }
+    
+    .stat-card {
+        margin-bottom: 1rem;
+    }
+    
+    .amount-info {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .navbar-nav .nav-link {
+        padding: 0.5rem 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .card-image {
+        height: 150px;
+    }
+    
+    .investment-form {
+        padding: 1rem;
+    }
+    
+    .stat-value {
+        font-size: 1.5rem;
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--secondary-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color);
+}
+
+/* Animation Classes */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.slide-up {
+    animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Utility Classes */
+.text-primary-custom {
+    color: var(--primary-color) !important;
+}
+
+.bg-card {
+    background-color: var(--card-bg) !important;
+}
+
+.border-custom {
+    border-color: var(--border-color) !important;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.user-select-none {
+    user-select: none;
+}
+
+
+.chart-container {
+    position: relative;
+    height: 100%;
+    min-height: 300px;
+}
+
+canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* ****************** */
+/* Style pour les cartes de factures */
+.invoice-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #2a2a2a;
+}
+
+.invoice-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Style pour les badges de statut */
+.badge.bg-orange {
+    background-color: #fd7e14;
+    color: white;
+}
+
+/* Style pour les tableaux */
+.table-dark {
+    background-color: #1a1a1a;
+    border-color: #2a2a2a;
+}
+
+.table-dark td {
+    border-color: #2a2a2a;
+}
+
+/* Animation de chargement */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+
+.text-monospace {
+    font-family: monospace;
+    font-size: 0.85em;
+    word-break: break-all;
+}
+
+.table-sm td, .table-sm th {
+    padding: 0.5rem;
+}
+
+#current-role-display {
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Styles pour les cartes de pool */
+.pool-card-ready {
+    box-shadow: 0 0 15px rgba(40, 167, 69, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.pool-card-waiting {
+    box-shadow: 0 0 15px rgba(255, 193, 7, 0.2);
+}
+
+.pool-card-inactive {
+    opacity: 0.8;
+}
+
+.pool-card-unavailable, .pool-card-error {
+    opacity: 0.6;
+}
+
+/* Header des cartes */
+.bg-success-dark {
+    background-color: #1e7e34 !important;
+}
+
+.bg-warning-dark {
+    background-color: #ffc107 !important;
+}
+
+.bg-secondary-dark {
+    background-color: #5a6268 !important;
+}
+
+.bg-danger-dark {
+    background-color: #dc3545 !important;
+}
+
+/* Image désactivée */
+.img-disabled {
+    filter: grayscale(80%);
+    opacity: 0.7;
+}
+
+/* Overlay pour les pools en attente */
+.pool-waiting-overlay {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 2;
+}
+
+.pool-waiting-overlay .badge {
+    font-size: 0.85rem;
+    padding: 0.5em 0.75em;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+/* Statistiques du pool */
+.pool-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+}
+
+.stat-item i {
+    font-size: 1rem;
+}
+
+/* Effet de survol pour les pools prêts */
+.pool-card-ready:hover {
+    transform: translateY(-5px);
+}
+
+/* Style pour les badges */
+.badge i {
+    margin-right: 0.3em;
+}
+
+/* Style pour les montants */
+.card-body h4 {
+    font-weight: 600;
+    margin-top: 0.3rem;
+}
+
+.card-body h6.text-muted {
+    font-size: 0.85rem;
+    margin-bottom: 0.2rem;
+}
+
+/* Style spécifique pour les sections de collatéral */
+.bg-darker {
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.bg-darker:hover {
+    background-color: #222;
+    transform: translateY(-2px);
+}

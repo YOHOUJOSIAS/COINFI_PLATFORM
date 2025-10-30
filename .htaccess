@@ -1,0 +1,17 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /coinfinance/
+
+    # Bloque l'accès aux dossiers système
+    RewriteRule ^(application|system|\.git) - [F,L]
+
+    # Redirige tout vers index.php sauf les fichiers existants
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ index.php?/$1 [L,QSA]
+</IfModule>
+
+# Désactive l'accès aux .htaccess depuis le navigateur
+<Files ".htaccess">
+    Require all denied
+</Files>
