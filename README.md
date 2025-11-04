@@ -1,71 +1,76 @@
-Description du projet
+Project Description
 
-Coinfinance est une plateforme dédiée à la gestion et au suivi des finances pour les PME.
-Elle permet de centraliser les informations liées aux factures, paiements, portefeuilles crypto, et autres indicateurs financiers, tout en offrant une interface moderne, fluide et responsive.
+Coinfinance is a platform dedicated to managing and monitoring finances for SMEs.
 
-Objectifs du projet
+It centralizes information related to invoices, payments, crypto wallets, and other financial indicators, while offering a modern, user-friendly, and responsive interface.
 
-- Simplifier la gestion financière pour les petites et moyennes entreprises.
-- Offrir une intégration facile avec des portefeuilles crypto (MetaMask).
-- Fournir un tableau de bord clair et esthétique avec des graphiques interactifs.
-- Renforcer la transparence et la traçabilité des transactions.
+Project Objectives
 
-Stack technique : 
+- Simplify financial management for small and medium-sized enterprises.
+
+- Offer easy integration with crypto wallets (MetaMask).
+
+- Provide a clear and visually appealing dashboard with interactive charts.
+
+- Enhance the transparency and traceability of transactions.
+
+Stack Technique:
 
 CodeIgniter 3 + PHP 8 + MySQL + Bootstrap 5 + MetaMask + Web3.js
 
+Installation and Configuration Steps
 
+1- Clone the project (git clone https://github.com/your-username/coinfinance.git)
+2- Then navigate to the project folder: cd coinfinance
+3- Configure the local environment
 
-Étapes d’installation et de configuration
-
-1- Cloner le projet ( git clone https://github.com/votre-utilisateur/coinfinance.git )
-2- Puis entre dans le dossier du projet : cd coinfinance 
-3- Configurer l’environnement local
-
-Assurez-vous d’avoir installé les outils suivants :
-PHP ≥ 7.4
+Ensure you have installed the following tools:
+PHP ​​≥ 7.4
 MySQL ≥ 5.7
-Apache ou Nginx (par exemple via XAMPP, Laragon ou WAMP)
-Composer (pour gérer les dépendances PHP, si nécessaire)
+Apache or Nginx (for example, via XAMPP, Laragon, or WAMP)
+Composer (to manage PHP dependencies, if necessary)
 
+4- Create the database
 
-4- Créer la base de données
+Open phpMyAdmin or your preferred MySQL client.
 
-Ouvre phpMyAdmin ou ton client MySQL préféré.
+Create a new database (for example, coinfinance_db):
 
-Crée une nouvelle base de données (par exemple coinfinance_db) :
+CREATE DATABASE coinfinance_db CHARACTERSET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
-CREATE DATABASE coinfinance_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci; 
-ensuite vous importez la base de donnée dans PhpMyAdmin
+Then import the database into phpMyAdmin.
 
+5- CodeIgniter Configurator
 
-5- Configurer CodeIgniter 
+In the application/config/config.php folder, enter the launch URL: $config['base_url'] = 'http://localhost/coinfinance/';
 
-dans le dossier application/config/config.php mettez l'url de lancement $config['base_url'] = 'http://localhost/coinfinance/';
-dans le dossier application/config/database.php  mettez à jour l'environement $db['default'] = array(
-    'dsn'   => '',
-    'hostname' => 'localhost',
-    'username' => 'root',  // par defaut le username est root
-    'password' => '',
-    'database' => 'coinfinance_db',   // le nom de la base de donnée
-    'dbdriver' => 'mysqli',
-    'dbprefix' => '',
-    'pconnect' => FALSE,
-    'db_debug' => (ENVIRONMENT !== 'production'),
-);
+In the application/config/database.php file, update the environment: `$db['default'] = array(
+'dsn' => '',
+'hostname' => 'localhost',
+'username' => 'root', // default username is root
+'password' => '',
+'database' => 'coinfinance_db', // database name
+'dbdriver' => 'mysqli',
+'dbprefix' => '',
+'pconnect' => FALSE,
+'db_debug' => (ENVIRONMENT !== 'production'),
 
+);`
 
-6- Lancer le serveur local
+6- Start the local server
 
- Si tu utilises XAMPP ou Laragon, place le projet dans le dossier htdocs ou www.
+If you are using XAMPP or Laragon, place the project in the htdocs or www folder.
 
-Ensuite, démarre ton serveur Apache et MySQL, puis visite : http://localhost/coinfinance/' 
+Next, start your Apache and MySQL servers, then visit: http://localhost/coinfinance/
 
+7- Install & configure MetaMask and Web3
 
-7-  Installer & configurer MetaMask et Web3
+If your project interacts with the blockchain:
 
-Si ton projet interagit avec la blockchain :
-- Installe l’extension MetaMask dans ton navigateur.
-- Connecte ton portefeuille à ton site.
-- Vérifie que le script web3.min.js ou l’initialisation initializeWallet() est bien chargée dans tes fichiers JS.
-- Teste la connexion via le bouton ou l’événement JavaScript prévu.
+- Install the MetaMask extension in your browser.
+
+- Connect your wallet to your website.
+
+- Verify that the web3.min.js script or the initializeWallet() function is correctly loaded in your JS files.
+
+- Test the connection using the designated button or JavaScript event.
