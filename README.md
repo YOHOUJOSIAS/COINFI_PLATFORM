@@ -74,3 +74,5 @@ If your project interacts with the blockchain:
 - Verify that the web3.min.js script or the initializeWallet() function is correctly loaded in your JS files.
 
 - Test the connection using the designated button or JavaScript event.
+
+CERTIFICAT LINK  : https://certs.hashgraphdev.com/89d7e7a7-58d0-43cb-b0be-2a2b8286001b.pdf 
